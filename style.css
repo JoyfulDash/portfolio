@@ -40,10 +40,22 @@ h1, h2, h3 {
   background: #f0f0f0;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #777;
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
 }
 
+.social-icons a {
+  color: #333;
+  font-size: 2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+.social-icons a:first-child:hover {
+  color: #000; /* GitHub black */
+}

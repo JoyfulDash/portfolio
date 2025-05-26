@@ -1,9 +1,17 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jared Rosado – Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-eNqW4HEtN7QgiwB6YZVfH4KoL5b1L3u3tbDlcKoS6E/4h9kz2cfpEYj1h+4R2Z3OapSjwB9j2Ay5b2ti9js9bg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
   <header>
@@ -15,13 +23,13 @@
     <section>
       <h2>Featured Projects</h2>
       <div class="projects">
-        <a href="https://cyber-jot.com" target="_blank">
-          <h3>Blog</h3>
+        <a href="https://cyber-jot.com" target="_blank" rel="noopener noreferrer">
+          <h3>Cyber-Jot</h3>
           <p>Cyber-Jot is more than a showcase — it's a living workspace where I tinker with ideas, improve my coding craft, 
             and share meaningful work with the community. Whether you're a fellow developer, recruiter, 
             or curious mind, you'll find a reflection of my technical skills and passion for problem-solving.</p>
         </a>
-        <a href="https://github.com/JoyfulDash/PandoraBox" target="_blank">
+        <a href="https://github.com/JoyfulDash/PandoraBox" target="_blank" rel="noopener noreferrer">
           <h3>PandoraBox</h3>
           <p> PandoraBox is a Python-based cryptography and encoding toolkit designed for learning, 
           experimentation, and practical application of common data transformation techniques. It includes: <br>
@@ -32,12 +40,11 @@
           🧠 MD5 and SHA-256 Brute-Forcers – Attempt to recover original text by brute-forcing hash values using 
           dictionary attacks</p>
         </a>
-        <a href="https://github.com/JoyfulDash/namegenerator" target="_blank">
+        <a href="https://github.com/JoyfulDash/namegenerator" target="_blank" rel="noopener noreferrer">
           <h3>Name Generator</h3>
           <p>This project is a simple desktop application built with Tkinter that generates random names 
             based on user-selected gender. It uses the Random User API to fetch realistic, randomly generated names.</p>
         </a>
-        <!-- Add more project links here -->
       </div>
     </section>
 
@@ -46,9 +53,19 @@
       <p>I'm Jared Rosado, a passionate developer building creative solutions and learning along the way. 
         This site showcases my public work on GitHub.</p>
     </section>
+
     <section>
-      <h2>Contact</h2>
-      <p>Find me on <a href="https://github.com/JoyfulDash" target="_blank">GitHub</a> or connect with me on
-        <a href="https://www.linkedin.com/in/rosadotj/" target="_blank">LinkedIn</a>.
+      <h2>Contact Me</h2>
+      <p>You can find me on:</p>
+      <div class="social-icons">
+        <a href="https://github.com/JoyfulDash" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/rosadotj/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
     </section>
   </main>
+</body>
+</html>
