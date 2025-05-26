@@ -40,22 +40,23 @@ h1, h2, h3 {
   background: #f0f0f0;
 }
 
-.social-icons {
+/* Patch: layout for icon + title on same line */
+.project-title-with-icon {
   display: flex;
-  gap: 1rem;
-  margin-top: 0.5rem;
+  align-items: center;
+  gap: 0.5em; /* space between icon and title */
 }
 
-.social-icons a {
-  color: #333;
-  font-size: 2rem;
-  transition: color 0.3s;
+.project-title-with-icon h3 {
+  margin: 0; /* remove default margin to align vertically */
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.2;
 }
 
-.social-icons a:hover {
-  color: #0077b5; /* LinkedIn blue */
-}
-
-.social-icons a:first-child:hover {
-  color: #000; /* GitHub black */
+.project-icon {
+  height: 1.2em; /* roughly matches h3 font size */
+  width: auto;
+  display: block;
+  flex-shrink: 0; /* keep icon size fixed */
 }

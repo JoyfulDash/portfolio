@@ -4,14 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jared Rosado – Portfolio</title>
+
+  <!-- ✅ Use ONLY the Font Awesome Kit (no Cloudflare needed) -->
+  <script src="https://kit.fontawesome.com/d57f9aea88.js" crossorigin="anonymous"></script>
+
+  <!-- Your custom stylesheet -->
   <link rel="stylesheet" href="style.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-eNqW4HEtN7QgiwB6YZVfH4KoL5b1L3u3tbDlcKoS6E/4h9kz2cfpEYj1h+4R2Z3OapSjwB9j2Ay5b2ti9js9bg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
 </head>
 <body>
   <header>
@@ -23,15 +21,16 @@
     <section>
       <h2>Featured Projects</h2>
       <div class="projects">
-        <a href="https://cyber-jot.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://cyber-jot.com" target="_blank" rel="noopener noreferrer" class="project-link">
           <h3>Cyber-Jot</h3>
           <p>Cyber-Jot is more than a showcase — it's a living workspace where I tinker with ideas, improve my coding craft, 
             and share meaningful work with the community. Whether you're a fellow developer, recruiter, 
             or curious mind, you'll find a reflection of my technical skills and passion for problem-solving.</p>
         </a>
+
         <a href="https://github.com/JoyfulDash/PandoraBox" target="_blank" rel="noopener noreferrer">
           <h3>PandoraBox</h3>
-          <p> PandoraBox is a Python-based cryptography and encoding toolkit designed for learning, 
+          <p>PandoraBox is a Python-based cryptography and encoding toolkit designed for learning, 
           experimentation, and practical application of common data transformation techniques. It includes: <br>
           🔐 Base64 Encoding/Decoding – Convert text to and from Base64 format <br>
           🏛️ Caesar Cipher (+3) – Apply a classic Caesar shift cipher for simple encryption <br>
@@ -50,21 +49,28 @@
 
     <section>
       <h2>About Me</h2>
-      <p>I'm Jared Rosado, a passionate developer building creative solutions and learning along the way. 
-        This site showcases my public work on GitHub.</p>
+      <p>
+        I’m Jared Rosado, someone who enjoys diving into a little bit of everything—whether it’s coding, tinkering with 
+        new tools, or exploring creative projects. I’m passionate about learning and experimenting across different fields, 
+        always eager to discover new skills and challenge myself. My portfolio is a reflection of this curiosity and 
+        my love for hands-on problem-solving, creativity, and continuous growth.
+      </p>
     </section>
 
     <section>
+  <h2>Certifications</h2>
+    <ul>
+      <li>ISC2 Certified in Cybersecurity – Issued by International Information System Security Certification 
+        Consortium (ISC2)</li>
+      <li>Practical OSINT Research Professional (PORP) – Issued by TCM Security</li>
+      <li>LPI Linux Essentials – Issued by Linux Professional Institute</li>
+      <li>CompTIA Security+ – Issued by CompTIA</li>
+    </ul>
+</section>
+
+    <section>
       <h2>Contact Me</h2>
-      <p>You can find me on:</p>
-      <div class="social-icons">
-        <a href="https://github.com/JoyfulDash" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/rosadotj/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </div>
+      <p>Connect with me on <a href="https://www.linkedin.com/in/rosadotj/" target="_blank" rel="noopener noreferrer">LinkedIn</a> or see my <a href="https://github.com/JoyfulDash" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
     </section>
   </main>
 </body>
