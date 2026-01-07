@@ -60,3 +60,12 @@ h1, h2, h3 {
   display: block;
   flex-shrink: 0; /* keep icon size fixed */
 }
+
+button {
+  margin-top: 1rem;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
