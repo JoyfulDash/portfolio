@@ -30,11 +30,10 @@ body {
   line-height: 1.75;
 
   overflow-x: hidden;
-  position: relative;
 }
 
 /* =========================================================
-   BACKGROUND GLOW EFFECTS
+   BACKGROUND GLOW
 ========================================================= */
 body::before,
 body::after {
@@ -125,17 +124,17 @@ nav {
 }
 
 /* =========================================================
-   HERO (FIXED SPACING PROPERLY)
+   HERO (FIXED)
 ========================================================= */
 header {
-  min-height: 70vh;
+  min-height: 60vh;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  padding: 4rem 2rem 2rem;
+  padding: 3rem 1.5rem 2rem;
 
   text-align: center;
   position: relative;
@@ -155,17 +154,20 @@ header {
 }
 
 header h1 {
-  font-size: clamp(3rem, 8vw, 6rem);
+  font-size: clamp(2.5rem, 6vw, 5rem);
   margin-bottom: 0.8rem;
 }
 
 .hero-description {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #94a3b8;
   margin-bottom: 1.2rem;
   max-width: 60ch;
 }
 
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
 .hero-buttons {
   display: flex;
   gap: 1rem;
@@ -174,6 +176,9 @@ header h1 {
   margin-top: 0.5rem;
 }
 
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
 .hero-socials {
   margin-top: 1.2rem;
   display: flex;
@@ -181,22 +186,30 @@ header h1 {
   font-size: 1.4rem;
 }
 
+.hero-socials a {
+  color: #cbd5e1;
+}
+
+.hero-socials a:hover {
+  color: #38bdf8;
+}
+
 /* =========================================================
-   MAIN LAYOUT (FIXED)
+   MAIN LAYOUT
 ========================================================= */
 main {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.25rem;
 }
 
 /* =========================================================
    SECTIONS
 ========================================================= */
 section {
-  margin-bottom: 4rem;
-  padding: 2.5rem;
-  border-radius: 24px;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  border-radius: 20px;
 
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.05);
@@ -204,17 +217,18 @@ section {
 }
 
 /* =========================================================
-   PROJECTS
+   PROJECT GRID (IMPORTANT FIX)
 ========================================================= */
 .projects {
   display: grid;
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
 }
 
 .projects a {
   display: block;
-  padding: 2rem;
-  border-radius: 24px;
+  padding: 1.5rem;
+  border-radius: 20px;
 
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.08);
@@ -226,18 +240,25 @@ section {
 }
 
 .projects a:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.35);
 }
 
+.projects h3 {
+  margin-bottom: 0.5rem;
+}
+
+.projects p {
+  color: #cbd5e1;
+}
+
 /* =========================================================
-   EDUCATION (CARD STYLE MATCHING PROJECTS)
+   EDUCATION (MATCH PROJECT STYLE)
 ========================================================= */
 .edu-card {
   display: block;
-  padding: 2rem;
-
-  border-radius: 24px;
+  padding: 1.5rem;
+  border-radius: 20px;
 
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.08);
@@ -246,7 +267,7 @@ section {
 }
 
 .edu-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.35);
 }
 
@@ -261,10 +282,11 @@ section {
 }
 
 .tags span {
-  padding: 0.4rem 0.8rem;
+  padding: 0.35rem 0.7rem;
   border-radius: 999px;
   background: rgba(56,189,248,0.1);
   color: #7dd3fc;
+  font-size: 0.8rem;
 }
 
 /* =========================================================
@@ -272,48 +294,23 @@ section {
 ========================================================= */
 .calendly-button {
   display: inline-block;
-  padding: 14px 28px;
-  border-radius: 14px;
+  padding: 12px 24px;
+  border-radius: 12px;
 
   background: linear-gradient(135deg, #38bdf8, #2563eb);
   color: white;
 
-  text-decoration: none;
   font-weight: 600;
+  text-decoration: none;
 }
 
 /* =========================================================
-   MOBILE
-========================================================= */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  header {
-    min-height: 60vh;
-  }
-
-  section {
-    padding: 1.5rem;
-    margin-bottom: 3rem;
-  }
-
-  header h1 {
-    font-size: 3rem;
-  }
-}
-
-/* =========================================================
-   MOBILE FIX (CLEAN + RESPONSIVE)
+   MOBILE FIX (FINAL CLEAN VERSION)
 ========================================================= */
 @media (max-width: 768px) {
 
-  /* NAVBAR FIX */
   nav {
     flex-direction: column;
-    align-items: center;
     gap: 0.75rem;
     padding: 1rem;
   }
@@ -324,24 +321,17 @@ section {
     gap: 0.8rem;
   }
 
-  .nav-links a {
-    font-size: 0.9rem;
-  }
-
-  /* HERO FIX */
   header {
-    min-height: 60vh;
-    padding: 3rem 1.25rem 2rem;
+    min-height: auto;
+    padding: 2.5rem 1rem;
   }
 
   header h1 {
-    font-size: 2.4rem;
-    line-height: 1.1;
+    font-size: 2.2rem;
   }
 
   .hero-description {
     font-size: 1rem;
-    padding: 0 0.5rem;
   }
 
   .hero-buttons {
@@ -352,58 +342,16 @@ section {
 
   .hero-buttons a {
     width: 100%;
-    max-width: 280px;
+    max-width: 260px;
     text-align: center;
   }
 
-  .hero-socials {
-    justify-content: center;
-  }
-
-  /* MAIN LAYOUT */
-  main {
-    padding: 1rem;
-  }
-
-  /* SECTIONS */
   section {
     padding: 1.25rem;
-    margin-bottom: 2.5rem;
-  }
-
-  /* PROJECT CARDS */
-  .projects {
-    grid-template-columns: 1fr;
-  }
-
-  .projects a {
-    padding: 1.25rem;
-  }
-
-  /* EDUCATION CARDS */
-  .edu-card {
-    padding: 1.25rem;
-  }
-
-  /* TAGS WRAP BETTER */
-  .tags {
-    gap: 0.4rem;
+    margin-bottom: 2rem;
   }
 
   .tags span {
     font-size: 0.75rem;
-    padding: 0.35rem 0.7rem;
-  }
-}
-
-/* SMALL PHONES (iPhone SE / older devices) */
-@media (max-width: 380px) {
-
-  header h1 {
-    font-size: 2rem;
-  }
-
-  .nav-links a {
-    font-size: 0.8rem;
   }
 }
