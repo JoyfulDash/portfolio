@@ -6,7 +6,6 @@
 
   <title>Jared Rosado – Portfolio</title>
 
-  <!-- SEO -->
   <meta name="description" content="Jared Rosado portfolio showcasing cybersecurity, OSINT, and software development projects." />
 
   <!-- Open Graph -->
@@ -15,25 +14,16 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jaredrosado.com">
   <meta property="og:image" content="https://jaredrosado.com/preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Jared Rosado Portfolio">
-  <meta name="twitter:description" content="Cybersecurity, OSINT, and software development projects.">
-  <meta name="twitter:image" content="https://jaredrosado.com/preview.png">
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/d57f9aea88.js" crossorigin="anonymous"></script>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
+  <!-- NAV -->
   <nav>
     <div class="logo">JR</div>
 
@@ -42,6 +32,7 @@
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#education">Education</a>
+      <a href="#certifications">Certifications</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
@@ -53,33 +44,25 @@
     <h1>Jared Rosado</h1>
 
     <p class="hero-description">
-      Technology Analyst - OSINT - Incident Response
+      Technology Analyst • OSINT • Incident Response
     </p>
 
-    <!-- HERO BUTTONS -->
     <div class="hero-buttons">
-      <a href="#projects" class="calendly-button">
-        View Projects
-      </a>
+      <a href="#projects" class="calendly-button">View Projects</a>
 
       <a href="https://calendly.com/jmrt/30min"
-        target="_blank"
-        class="secondary-button">
+         target="_blank"
+         class="secondary-button">
         Schedule Call
       </a>
     </div>
 
-    <!-- SOCIAL ICONS -->
     <div class="hero-socials">
-      <a href="https://www.linkedin.com/in/rosadotj/"
-        target="_blank"
-        aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/rosadotj/" target="_blank">
         <i class="fab fa-linkedin"></i>
       </a>
 
-      <a href="https://github.com/JoyfulDash"
-        target="_blank"
-        aria-label="GitHub">
+      <a href="https://github.com/JoyfulDash" target="_blank">
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -91,10 +74,8 @@
     <!-- ABOUT -->
     <section id="about">
       <h2>About Me</h2>
-
       <p>
-        I’m Jared Rosado, a technology enthusiast passionate about cybersecurity,
-        OSINT, coding, and creative problem-solving.
+        I focus on cybersecurity, OSINT, and building practical security tools.
       </p>
     </section>
 
@@ -106,7 +87,7 @@
 
         <a href="https://cyber-jot.com" target="_blank">
           <h3>Cyber-Jot</h3>
-          <p>A personal development hub showcasing projects and experiments.</p>
+          <p>Personal development hub for projects and experiments.</p>
           <div class="tags">
             <span>Web Dev</span>
             <span>Cybersecurity</span>
@@ -115,7 +96,7 @@
 
         <a href="https://github.com/JoyfulDash/HomeIntel" target="_blank">
           <h3>HomeIntel</h3>
-          <p>OSINT browser extension for faster address investigations.</p>
+          <p>OSINT browser extension for faster investigations.</p>
           <div class="tags">
             <span>JavaScript</span>
             <span>OSINT</span>
@@ -124,7 +105,7 @@
 
         <a href="https://github.com/JoyfulDash/PandoraBox" target="_blank">
           <h3>PandoraBox</h3>
-          <p>Python cryptography and encoding toolkit.</p>
+          <p>Cryptography toolkit for experimentation.</p>
           <div class="tags">
             <span>Python</span>
             <span>Security</span>
@@ -136,7 +117,7 @@
 
     <!-- SKILLS -->
     <section id="skills">
-      <h2>Skills & Certifications</h2>
+      <h2>Skills</h2>
 
       <div class="tags">
         <span>Python</span>
@@ -144,7 +125,7 @@
         <span>OSINT</span>
         <span>Cybersecurity</span>
         <span>Linux</span>
-        <span>Security+</span>
+        <span>Incident Response</span>
       </div>
     </section>
 
@@ -156,25 +137,70 @@
 
         <div class="edu-card">
           <h3>B.S. Information Technology Management</h3>
-          <p>Summa Cum Laude • GPA: 3.9</p>
-
+          <p>Summa Cum Laude • GPA 3.9</p>
           <div class="tags">
             <span>IT Management</span>
-            <span>Cybersecurity Foundations</span>
-            <span>Graduated</span>
+            <span>Cybersecurity</span>
           </div>
         </div>
 
         <div class="edu-card">
           <h3>A.A.S. Avionics Systems Technology</h3>
-          <p>GPA: 3.9</p>
-
+          <p>GPA 3.9</p>
           <div class="tags">
             <span>Avionics</span>
             <span>Systems Engineering</span>
-            <span>Technical Training</span>
           </div>
         </div>
+
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS (BUBBLE CARDS + HOVER FIXED) -->
+    <section id="certifications">
+      <h2>Certifications</h2>
+
+      <div class="projects">
+
+        <a class="edu-card" href="https://www.credly.com/badges/54a23a5f-b2d5-43ce-9aa6-f4b213ce809e/linked_in_profile" target="_blank">
+          <h3>ISC2 Certified in Cybersecurity</h3>
+          <p>Security fundamentals and access control</p>
+          <div class="tags">
+            <span>Cybersecurity</span>
+          </div>
+        </a>
+
+        <a class="edu-card" href="https://certified.tcm-sec.com/62d0a7e7-0e3d-4a6c-8b75-e3aee8024bdb#acc.oY7tKPXG" target="_blank">
+          <h3>Practical OSINT Research Professional</h3>
+          <p>OSINT investigations and intelligence gathering</p>
+          <div class="tags">
+            <span>OSINT</span>
+          </div>
+        </a>
+
+        <a class="edu-card" href="https://www.credly.com/badges/1ffb3b06-4ee9-4a35-86d1-120816953183" target="_blank">
+          <h3>Open-Source Certified (OSC)</h3>
+          <p>Open-source intelligence workflows</p>
+          <div class="tags">
+            <span>OSINT</span>
+          </div>
+        </a>
+
+        <a class="edu-card" href="https://cs.lpi.org/caf/Xamman/certification/verify/LPI000525471/tjp2jzgvaq" target="_blank">
+          <h3>Linux Essentials</h3>
+          <p>Linux command line and system basics</p>
+          <div class="tags">
+            <span>Linux</span>
+          </div>
+        </a>
+
+        <a class="edu-card" href="https://www.credly.com/badges/18491679-4ffd-4ae8-b6b5-1cf52ab12328?source=linked_in_profile" target="_blank">
+          <h3>CompTIA Security+</h3>
+          <p>Core cybersecurity principles and defense</p>
+          <div class="tags">
+            <span>Security+</span>
+          </div>
+        </a>
 
       </div>
     </section>
@@ -184,70 +210,18 @@
       <h2>Contact</h2>
 
       <p>
-        Connect with me on
+        Connect on
         <a href="https://www.linkedin.com/in/rosadotj/" target="_blank">LinkedIn</a>
-        or 
+        or
         <a href="https://github.com/JoyfulDash" target="_blank">GitHub</a>.
       </p>
 
-      <a href="https://calendly.com/jmrt/30min"
-        target="_blank"
-        class="calendly-button">
+      <a href="https://calendly.com/jmrt/30min" target="_blank" class="calendly-button">
         Schedule a Call
       </a>
     </section>
 
   </main>
-
-  <!-- SCROLL REVEAL -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-
-  <script>
-    ScrollReveal().reveal('section', {
-      distance: '50px',
-      duration: 1000,
-      origin: 'bottom',
-      interval: 150,
-      reset: false
-    });
-  </script>
-
-  <!-- SCROLL SPY -->
-  <script>
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-links a");
-
-    let ticking = false;
-
-    window.addEventListener("scroll", () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-
-          let current = "";
-
-          sections.forEach(section => {
-            const sectionTop = section.offsetTop - 120;
-
-            if (pageYOffset >= sectionTop) {
-              current = section.getAttribute("id");
-            }
-          });
-
-          navLinks.forEach(link => {
-            link.classList.remove("active");
-
-            if (current && link.getAttribute("href") === "#" + current) {
-              link.classList.add("active");
-            }
-          });
-
-          ticking = false;
-        });
-
-        ticking = true;
-      }
-    });
-  </script>
 
 </body>
 </html>
