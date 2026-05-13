@@ -304,3 +304,106 @@ section {
     font-size: 3rem;
   }
 }
+
+/* =========================================================
+   MOBILE FIX (CLEAN + RESPONSIVE)
+========================================================= */
+@media (max-width: 768px) {
+
+  /* NAVBAR FIX */
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  /* HERO FIX */
+  header {
+    min-height: 60vh;
+    padding: 3rem 1.25rem 2rem;
+  }
+
+  header h1 {
+    font-size: 2.4rem;
+    line-height: 1.1;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .hero-socials {
+    justify-content: center;
+  }
+
+  /* MAIN LAYOUT */
+  main {
+    padding: 1rem;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* PROJECT CARDS */
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .projects a {
+    padding: 1.25rem;
+  }
+
+  /* EDUCATION CARDS */
+  .edu-card {
+    padding: 1.25rem;
+  }
+
+  /* TAGS WRAP BETTER */
+  .tags {
+    gap: 0.4rem;
+  }
+
+  .tags span {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.7rem;
+  }
+}
+
+/* SMALL PHONES (iPhone SE / older devices) */
+@media (max-width: 380px) {
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+}
