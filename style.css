@@ -1,71 +1,306 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
+/* =========================================================
+   GOOGLE FONT
+========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* =========================================================
+   RESET
+========================================================= */
+* {
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
-  color: #333;
+  box-sizing: border-box;
 }
 
+/* =========================================================
+   GLOBAL
+========================================================= */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+
+  background:
+    radial-gradient(circle at top left, #1f2937, #0f172a 45%),
+    linear-gradient(to bottom, #0f172a, #020617);
+
+  color: #f8fafc;
+  line-height: 1.75;
+
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* =========================================================
+   BACKGROUND GLOW EFFECTS
+========================================================= */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(150px);
+  z-index: -1;
+}
+
+body::before {
+  width: 500px;
+  height: 500px;
+  background: #2563eb;
+  top: -200px;
+  right: -200px;
+  opacity: 0.15;
+}
+
+body::after {
+  width: 400px;
+  height: 400px;
+  background: #38bdf8;
+  bottom: -150px;
+  left: -150px;
+  opacity: 0.08;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+nav {
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 2rem;
+
+  background: rgba(2, 6, 23, 0.7);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: #cbd5e1;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a.active {
+  color: #38bdf8;
+}
+
+/* =========================================================
+   HERO (FIXED SPACING PROPERLY)
+========================================================= */
 header {
-  background: #111;
-  color: #fff;
-  padding: 2rem;
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 4rem 2rem 2rem;
+
   text-align: center;
+  position: relative;
 }
 
+.hero-grid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at center, black, transparent 80%);
+  z-index: -1;
+}
+
+header h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  margin-bottom: 0.8rem;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin-bottom: 1.2rem;
+  max-width: 60ch;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.hero-socials {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 1.2rem;
+  font-size: 1.4rem;
+}
+
+/* =========================================================
+   MAIN LAYOUT (FIXED)
+========================================================= */
 main {
+  max-width: 1100px;
+  margin: 0 auto;
   padding: 2rem;
-  max-width: 800px;
-  margin: auto;
 }
 
-h1, h2, h3 {
-  margin-bottom: 0.5rem;
+/* =========================================================
+   SECTIONS
+========================================================= */
+section {
+  margin-bottom: 4rem;
+  padding: 2.5rem;
+  border-radius: 24px;
+
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+}
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+.projects {
+  display: grid;
+  gap: 2rem;
 }
 
 .projects a {
   display: block;
-  background: white;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 24px;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+
   text-decoration: none;
-  color: #333;
-  transition: transform 0.2s;
+  color: #f8fafc;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .projects a:hover {
-  transform: scale(1.02);
-  background: #f0f0f0;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
 }
 
-/* Patch: layout for icon + title on same line */
-.project-title-with-icon {
-  display: flex;
-  align-items: center;
-  gap: 0.5em; /* space between icon and title */
-}
-
-.project-title-with-icon h3 {
-  margin: 0; /* remove default margin to align vertically */
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.2;
-}
-
-.project-icon {
-  height: 1.2em; /* roughly matches h3 font size */
-  width: auto;
+/* =========================================================
+   EDUCATION (CARD STYLE MATCHING PROJECTS)
+========================================================= */
+.edu-card {
   display: block;
-  flex-shrink: 0; /* keep icon size fixed */
+  padding: 2rem;
+
+  border-radius: 24px;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-button {
+.edu-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+/* =========================================================
+   TAGS
+========================================================= */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   margin-top: 1rem;
-  padding: 12px 20px;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
 }
 
+.tags span {
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(56,189,248,0.1);
+  color: #7dd3fc;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+.calendly-button {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  color: white;
+
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  header {
+    min-height: 60vh;
+  }
+
+  section {
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  header h1 {
+    font-size: 3rem;
+  }
+}

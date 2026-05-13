@@ -3,129 +3,251 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>Jared Rosado – Portfolio</title>
 
-  <!-- ✅ Use ONLY the Font Awesome Kit (no Cloudflare needed) -->
+  <!-- SEO -->
+  <meta name="description" content="Jared Rosado portfolio showcasing cybersecurity, OSINT, and software development projects." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jared Rosado Portfolio">
+  <meta property="og:description" content="Cybersecurity, OSINT, and software development projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jaredrosado.com">
+  <meta property="og:image" content="https://jaredrosado.com/preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jared Rosado Portfolio">
+  <meta name="twitter:description" content="Cybersecurity, OSINT, and software development projects.">
+  <meta name="twitter:image" content="https://jaredrosado.com/preview.png">
+
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/d57f9aea88.js" crossorigin="anonymous"></script>
 
-  <!-- Your custom stylesheet -->
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Optional inline CSS for the button-style link -->
-  <style>
-    .calendly-button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 12px 24px;
-      background-color: #111;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: opacity 0.2s ease;
-    }
-
-    .calendly-button:hover {
-      opacity: 0.9;
-    }
-  </style>
 </head>
+
 <body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">JR</div>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
   <header>
+    <div class="hero-grid"></div>
+
     <h1>Jared Rosado</h1>
-    <p>Technology Analyst • Creator • Tech Enthusiast</p>
+
+    <p class="hero-description">
+      Technology Analyst - OSINT - Incident Response
+    </p>
+
+    <!-- HERO BUTTONS -->
+    <div class="hero-buttons">
+      <a href="#projects" class="calendly-button">
+        View Projects
+      </a>
+
+      <a href="https://calendly.com/jmrt/30min"
+        target="_blank"
+        class="secondary-button">
+        Schedule Call
+      </a>
+    </div>
+
+    <!-- SOCIAL ICONS -->
+    <div class="hero-socials">
+      <a href="https://www.linkedin.com/in/rosadotj/"
+        target="_blank"
+        aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+
+      <a href="https://github.com/JoyfulDash"
+        target="_blank"
+        aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
   </header>
 
+  <!-- MAIN -->
   <main>
-    <section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About Me</h2>
+
+      <p>
+        I’m Jared Rosado, a technology enthusiast passionate about cybersecurity,
+        OSINT, coding, and creative problem-solving.
+      </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
       <h2>Featured Projects</h2>
+
       <div class="projects">
-        <a href="https://cyber-jot.com" target="_blank" rel="noopener noreferrer" class="project-link">
+
+        <a href="https://cyber-jot.com" target="_blank">
           <h3>Cyber-Jot</h3>
-          <p>Cyber-Jot is more than a showcase — it's a living workspace where I tinker with ideas, improve my coding craft, 
-            and share meaningful work with the community. Whether you're a fellow developer, recruiter, 
-            or curious mind, you'll find a reflection of my technical skills and passion for problem-solving.</p>
+          <p>A personal development hub showcasing projects and experiments.</p>
+          <div class="tags">
+            <span>Web Dev</span>
+            <span>Cybersecurity</span>
+          </div>
         </a>
 
-        <a href="https://github.com/JoyfulDash/HomeIntel" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/JoyfulDash/HomeIntel" target="_blank">
           <h3>HomeIntel</h3>
-          <p>HomeIntel is a lightweight browser extension built for OSINT workflows. Instead of manually opening multiple 
-            resources, it automates address lookups by launching several open-source sites at once. This makes it easier 
-            and faster to cross-reference addresses across trusted sources. <br>
-            🚀 Multi-Site Search – Instantly opens several open-source lookup tools in new tabs <br>
-            🕵️ Investigator-Friendly – Speeds up OSINT and geolocation research <br>
-            🌐 Simple & Lightweight – Developed with HTML and JavaScript <br>
-            📌 Practical Utility – Great for open-source investigations, fact-checking, or situational awareness</p>
+          <p>OSINT browser extension for faster address investigations.</p>
+          <div class="tags">
+            <span>JavaScript</span>
+            <span>OSINT</span>
+          </div>
         </a>
 
-        <a href="https://github.com/JoyfulDash/PandoraBox" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/JoyfulDash/PandoraBox" target="_blank">
           <h3>PandoraBox</h3>
-          <p>PandoraBox is a Python-based cryptography and encoding toolkit designed for learning, 
-            experimentation, and practical application of common data transformation techniques. It includes: <br>
-            🔐 Base64 Encoding/Decoding – Convert text to and from Base64 format <br>
-            🏛️ Caesar Cipher (+3) – Apply a classic Caesar shift cipher for simple encryption <br>
-            🔄 Text Reversal – Reverse any input string <br>
-            🔒 SHA-256 Hashing – Generate secure hash digests of text inputs <br>
-            🧠 MD5 and SHA-256 Brute-Forcers – Attempt to recover original text by brute-forcing hash values using 
-            dictionary attacks</p>
+          <p>Python cryptography and encoding toolkit.</p>
+          <div class="tags">
+            <span>Python</span>
+            <span>Security</span>
+          </div>
         </a>
+
       </div>
     </section>
 
-    <section>
-      <h2>About Me</h2>
-      <p>
-        I’m Jared Rosado, someone who enjoys diving into a little bit of everything—whether it’s coding, tinkering with 
-        new tools, or exploring creative projects. I’m passionate about learning and experimenting across different fields, 
-        always eager to discover new skills and challenge myself. My portfolio is a reflection of this curiosity and 
-        my love for hands-on problem-solving, creativity, and continuous growth.
-      </p>
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Skills & Certifications</h2>
+
+      <div class="tags">
+        <span>Python</span>
+        <span>JavaScript</span>
+        <span>OSINT</span>
+        <span>Cybersecurity</span>
+        <span>Linux</span>
+        <span>Security+</span>
+      </div>
     </section>
 
-    <section>
+    <!-- EDUCATION -->
+    <section id="education">
       <h2>Education</h2>
-      <ul>
-        <li>Bachelor of Science (BS) in Information Technology Management, Summa Cum Laude, GPA: 3.9</li>
-        <li>Associate of Applied Science (AAS) Degree in Avionics Systems Technology, GPA: 3.9</li>
-      </ul>
+
+      <div class="projects">
+
+        <div class="edu-card">
+          <h3>B.S. Information Technology Management</h3>
+          <p>Summa Cum Laude • GPA: 3.9</p>
+
+          <div class="tags">
+            <span>IT Management</span>
+            <span>Cybersecurity Foundations</span>
+            <span>Graduated</span>
+          </div>
+        </div>
+
+        <div class="edu-card">
+          <h3>A.A.S. Avionics Systems Technology</h3>
+          <p>GPA: 3.9</p>
+
+          <div class="tags">
+            <span>Avionics</span>
+            <span>Systems Engineering</span>
+            <span>Technical Training</span>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <section>
-      <h2>Certifications</h2>
-      <ul>
-        <li><a href="https://www.credly.com/badges/54a23a5f-b2d5-43ce-9aa6-f4b213ce809e/linked_in_profile" target="_blank" 
-          rel="noopener noreferrer">
-          ISC2 Certified in Cybersecurity</a> – Issued by ISC2</li>
-        <li><a href="https://certified.tcm-sec.com/62d0a7e7-0e3d-4a6c-8b75-e3aee8024bdb#acc.oY7tKPXG" target="_blank" 
-          rel="noopener noreferrer">
-          Practical OSINT Research Professional (PORP)</a> – Issued by TCM Security</li>
-        <li><a href="https://www.credly.com/badges/1ffb3b06-4ee9-4a35-86d1-120816953183" target="_blank" 
-          rel="noopener noreferrer">
-          Open-Source Certified (OSC)</a> – Issued by OSMOSIS</li>
-        <li><a href="https://cs.lpi.org/caf/Xamman/certification/verify/LPI000525471/tjp2jzgvaq" target="_blank" 
-          rel="noopener noreferrer">
-          LPI Linux Essentials</a> – Issued by Linux Professional Institute</li>
-        <li><a href="https://www.credly.com/badges/18491679-4ffd-4ae8-b6b5-1cf52ab12328?source=linked_in_profile" target="_blank" 
-          rel="noopener noreferrer">
-          CompTIA Security+</a> – Issued by CompTIA</li>
-      </ul>
-    </section>
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
 
-    <section>
-      <h2>Contact Me</h2>
       <p>
-        Connect with me on 
-        <a href="https://www.linkedin.com/in/rosadotj/" target="_blank">LinkedIn</a>, 
-        see my <a href="https://github.com/JoyfulDash" target="_blank">GitHub</a>,
-        or schedule a call below.
+        Connect with me on
+        <a href="https://www.linkedin.com/in/rosadotj/" target="_blank">LinkedIn</a>
+        or 
+        <a href="https://github.com/JoyfulDash" target="_blank">GitHub</a>.
       </p>
 
-      <!-- ✅ Hard link version of Calendly button -->
-      <a href="https://calendly.com/jmrt/30min" target="_blank" class="calendly-button">
+      <a href="https://calendly.com/jmrt/30min"
+        target="_blank"
+        class="calendly-button">
         Schedule a Call
       </a>
     </section>
 
   </main>
+
+  <!-- SCROLL REVEAL -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <script>
+    ScrollReveal().reveal('section', {
+      distance: '50px',
+      duration: 1000,
+      origin: 'bottom',
+      interval: 150,
+      reset: false
+    });
+  </script>
+
+  <!-- SCROLL SPY -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    let ticking = false;
+
+    window.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+
+          let current = "";
+
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop - 120;
+
+            if (pageYOffset >= sectionTop) {
+              current = section.getAttribute("id");
+            }
+          });
+
+          navLinks.forEach(link => {
+            link.classList.remove("active");
+
+            if (current && link.getAttribute("href") === "#" + current) {
+              link.classList.add("active");
+            }
+          });
+
+          ticking = false;
+        });
+
+        ticking = true;
+      }
+    });
+  </script>
+
 </body>
 </html>
