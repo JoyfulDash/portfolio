@@ -447,10 +447,10 @@ a:hover {
 
 .profile-img {
   width: 220px;
-  height: 220pxs;
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #ffffff; /* optional clean border */
+  border: 4px solid #ffffff;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
